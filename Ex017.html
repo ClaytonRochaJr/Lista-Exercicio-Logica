@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex017</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex016.html">Back</a></li>
+                <li><a href="Ex018.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex017</h1>
+            <br>
+            <p>Numeros aleatórios que estão entre 10 e 150: (os números são gerados entre 0 a 200)</p>
+            <br>
+
+            <input type="button" value="calcular" onclick="conta()">
+            <div id="res"></div>
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        function conta() {
+            let resultado = document.querySelector("#res");
+            for (n1 = 0; n1 <= 80; n1++) {
+                aleatorio = parseInt(Math.random() * 200);
+                if (aleatorio <= 10 && aleatorio <= 150) {
+                    resultado.innerHTML += "O número (" + aleatorio + ") está entre intervalo de 10 e 150 <br>"
+                } else {
+                    resultado.innerHTML += "O número (" + aleatorio + ") não está no intervalo <br>"
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

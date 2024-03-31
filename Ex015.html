@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex015</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex014.html">Back</a></li>
+                <li><a href="Ex016.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex015</h1>
+            <h1>Intervalo entre 100 e 200</h1>
+            <br>
+            <p>Insira número</p>
+            <input type="text" id="n1">
+
+            <input type="button" value="calcular" onclick="conta()">
+            <div id="res"></div>
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        function conta() {
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let result = document.querySelector('#res');
+            if (!isNaN(n1)) {
+                if (n1 >= 100 && n1 <= 200) {
+                    result.innerHTML=`O número está no intervalo entre 100 e 200`
+                } else {
+                    result.innerHTML = `O número não está no intervalo entre 100 e 200`;
+                }
+            } else {
+                alert("O valor inserido não é um número, por favor insira um número!");
+            }
+        }
+    </script>
+</body>
+
+</html>

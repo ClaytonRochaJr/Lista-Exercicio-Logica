@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercircio 01</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script>
+        function calcular() {
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById("resultado").textContent = "Por favor, insira números válidos em ambos os campos.";
+            } else {
+                let resultado = n1 + n2;
+                document.getElementById("resultado").textContent = resultado;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">Back</a></li>
+                <li><a href="Ex02.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex01</h1>
+            <h1>Soma de dois números</h1>
+            <input type="number" name="" id="n1"> + <input type="number" name="" id="n2"> = <div id="resultado">
+                <p>Resultado</p>
+            </div>
+            <input type="button" value="calcular" id="calcular" onclick="calcular()">
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex020</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex019.html">Back</a></li>
+                <li><a href="Ex021.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex020</h1>
+            <br>
+            <h1>Concessionária CARANGO VELHO</h1>
+            <br>
+            <p>Para inserir um veículo, por favor, insira o ano. (o valor de cada veículo é: 15.000R$)</p>
+            <br>
+            <input type="text" id="n1">
+            <input type="button" value="inserir veículo" onclick="inserir()">
+            <input type="button" value="Mostrar veículos" onclick="mostrar()">
+            <div id="res"></div>
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        //até 2000 12% depois 7%
+        let veiculo = 15000;
+        let carros = 0;
+        let desconto = 0;
+        let carroVelho = 0;
+        let carroNovo = 0;
+        let result = document.querySelector('#res');
+
+        function inserir() {
+            let n1 = parseFloat(document.getElementById("n1").value);
+            if (n1 <= 2000) {
+                desconto += veiculo * 0.12;
+                carroVelho++;
+                carros++;
+            } else {
+                desconto += veiculo * 0.07;
+                carros++;
+                carroNovo++;
+            }
+        }
+        function mostrar() {
+            result.innerHTML = `<p>O desconto total é de: ${desconto}</p> <p>carros depois do ano 2000: ${carroNovo} Carros antes de 2000:
+                 ${carroVelho}</p> <p>O valor total é de: ${(carros * veiculo) - desconto}</p>`
+        }
+    </script>
+</body>
+
+</html>

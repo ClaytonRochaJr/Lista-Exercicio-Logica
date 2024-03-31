@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex023</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex022.html">Back</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex023</h1>
+            <br>
+            <h1>Verificar número</h1>
+            <br>
+
+            <br>
+            <input type="text" id="n1">
+            <input type="button" value="Verificar" onclick="inserir()">
+
+            <div id="res"></div>
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        function inserir() {
+            let n1 = parseInt(document.getElementById("n1").value);
+            let result = document.querySelector("#res");
+            if (n1 > 80) {
+                result.innerHTML = `${n1} é maior do que 80`;
+            } else if (n1 < 25) {
+                result.innerHTML = `${n1} é menor do que 25`;
+            }
+            else if (n1 == 40) {
+                result.innerHTML = `${n1} é igual a 40`;
+            } else {
+                result.innerHTML = `${n1} não está entre os intervalos de 80/40/25`
+            }
+        }
+
+    </script>
+</body>
+
+</html>

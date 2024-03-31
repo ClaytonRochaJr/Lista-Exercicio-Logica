@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex022</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex021.html">Back</a></li>
+                <li><a href="Ex023.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex022</h1>
+            <p>Preço de Custo e preço de venda</p>
+            
+            <br>
+            <p>Preço Custo</p><input type="text" id="precoCusto">
+            <br>
+            <p>Preço venda</p><input type="text" id="precoVenda">
+            <input type="button" value="INSERIR Produto" onclick="insere()">
+            <input type="button" value="Calcular" onclick="conta()">
+
+            <div id="res"></div>
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        let precosCusto = [];
+        let precosVenda = [];
+        function insere() {
+            var precoCusto = parseFloat(document.getElementById("precoCusto").value);
+            var precoVenda = parseFloat(document.getElementById("precoVenda").value);
+
+            precosCusto.push(precoCusto);
+            precosVenda.push(precoVenda);
+
+        }
+        function conta() {
+
+            // Verificar se houve lucro, prejuízo ou empate para cada produto
+            let resultados = "";
+            for (let i = 0; i < precosCusto.length; i++) {
+                if (precosVenda[i] > precosCusto[i]) {
+                    resultados += "Produto " + (i + 1) + ": Lucro<br>";
+                } else if (precosVenda[i] < precosCusto[i]) {
+                    resultados += "Produto " + (i + 1) + ": Prejuízo<br>";
+                } else {
+                    resultados += "Produto " + (i + 1) + ": Empate<br>";
+                }
+            }
+
+            // Calcular a média dos preços de custo e de venda
+            let mediaCusto = precosCusto.reduce((acc, current) => acc + current, 0) / precosCusto.length;
+            let mediaVenda = precosVenda.reduce((acc, current) => acc + current, 0) / precosVenda.length;
+
+            
+            let resultadoElement = document.querySelector('#res');
+            resultadoElement.innerHTML = "Resultados:<br>" + resultados + "<br>Média de Preço de Custo: " + mediaCusto + "<br>Média de Preço de Venda: " + mediaVenda;
+        }
+
+    </script>
+</body>
+
+</html>

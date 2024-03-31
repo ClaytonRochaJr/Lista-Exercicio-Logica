@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex021</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex020.html">Back</a></li>
+                <li><a href="Ex022.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex021</h1>
+            <h1>verificador se está apto para servir.</h1>
+            <br>
+
+            <p>Para prosseguir aperte no botão</p>
+            <input type="button" value="Iniciar questionário" onclick="conta()">
+            <div id="res"></div>
+
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+
+        function conta() {
+            let result = document.querySelector('#res');
+            let nome = prompt("Insira o seu nome");
+            let sexo = prompt("Insira seu sexo");
+            let idade = prompt("Insira sua idade");
+            let saude = confirm("Você está bem de saúde?");
+
+            if (idade <= 18 || saude == false) {
+                result.innerHTML += ` <p>Dados do candidato: </p> <p>Nome: ${nome}</p> <p>Sexo: ${sexo}</p> <p>Idade: ${idade}</p><h3>Status do candidato: </h3><p> reprovado</p>`;
+
+            } else {
+                result.innerHTML += `<p>Dados do candidato: </p> <p>Nome: ${nome}</p> <p>Sexo: ${sexo}</p> <p>Idade: ${idade}</p><h3>Status do candidato: </h3><p> aprovado</p> `;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

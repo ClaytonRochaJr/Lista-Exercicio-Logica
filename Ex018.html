@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex018</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo-imagem"><img src="img/Logo_iesb_cortada.jpeg" alt="" class="imagem-logo"></div>
+            <div class="logo-texto">
+                <h1>IESB</h1>
+            </div>
+        </div> <!-- container logo -->
+
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Ex017.html">Back</a></li>
+                <li><a href="Ex019.html">Next</a></li>
+            </ul>
+        </div> <!-- menu -->
+
+    </header>
+    <section class="section-aluno">
+        <h1>Análise e desenvolvimento de Sistemas</h1>
+        <h1>Turma: OADSD2A
+        </h1>
+        <p>Desenvolvido por: Clayton Rocha de Barros Júnior</p>
+        <p></p>
+    </section>
+
+    <section class="section-main">
+
+        <div>
+            <h1>Ex018</h1>
+            <br>
+            <p>Um verificador de maioridade será implementado, com a geração aleatória de 75 idades.</p>
+            <br>
+
+            <input type="button" value="Gerar idade" onclick="conta()">
+            <div id="res"></div>
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Developed by &copy; Clayton Rocha de Barros Júnior</p>
+    </footer>
+    <script>
+        function conta() {
+            let resultado = document.querySelector("#res");
+            let menor = 0;
+            let maior = 0;
+            for (n1 = 0; n1 <= 75; n1++) {
+                aleatorio = parseInt(Math.random() * 120);
+                if (aleatorio < 18) {
+                    menor++;
+                    resultado.innerHTML += "O a pessoa de idade " + aleatorio + " anos é MENOR de idade <br>"
+                } else {
+                    resultado.innerHTML += "O a pessoa de idade " + aleatorio + " anos é maior de idade <br>"
+                    maior++;
+                }
+
+            }
+            resultado.innerHTML += "<br><strong>O total de pessoas menores de idade foram: " + menor + " e maiores de idade foram: " + maior + "<br><strong><br>"
+        }
+    </script>
+</body>
+
+</html>
