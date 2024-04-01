@@ -60,7 +60,8 @@ a {
 }
 
 body {
-    background: rgb(101, 101, 250);
+    background-color: rgb(27, 27, 27);
+    /* background: rgb(101, 101, 250); */
     font: normal 15pt Arial;
     color: white;
 

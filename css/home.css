@@ -3,24 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-.lista a {
+.lista a{
     text-decoration: none;
     color: black;
     padding: 8px;
 
 }
 
-.lista a:hover {
+.lista a:hover{
     background-color: rgb(37, 37, 37);
     color: white;
     border-radius: 3px;
-
+    
 }
-
-.elemento-a {
+.elemento-a{
     margin-bottom: 15px;
-
+    
 }
 
 header {
@@ -72,11 +70,9 @@ header {
 }
 
 body {
-    background: rgb(101, 101, 250);
+    background-color: rgb(27, 27, 27);
     font: normal 15pt Arial;
     color: white;
-
-
 }
 
 /* header {
